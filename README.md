@@ -38,8 +38,7 @@ User Profile (Query) → Embedding → Search → Retrieve top-K
 
 ```
 ├── RAG_Amazon.ipynb          # Main Google Colab notebook (full pipeline)
-├── report/
-│   └── main.tex              # LaTeX report (Spanish)
+├── report.pdf                # PDF report (Spanish)
 ├── data/                     # Place dataset files here (not tracked by git)
 │   ├── Digital_Music.jsonl
 │   └── meta_Digital_Music.jsonl
