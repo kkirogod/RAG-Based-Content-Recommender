@@ -28,7 +28,7 @@ User Profile (Query) → Embedding → Search → Retrieve top-K
 | **I — Item Processing** | HTML cleaning, lowercasing, metadata + review concatenation |
 | **II — Indexing & Retrieval** | `all-MiniLM-L6-v2` embeddings, L2 norm, FAISS `IndexFlatIP` |
 | **III — Augmentation** | Structured prompt: role + user profile + candidates + instructions |
-| **IV — Generation** | Gemini 1.5 Flash re-ranks top-10 candidates into a structured JSON |
+| **IV — Generation** | Gemini 3 Flash re-ranks top-10 candidates into a structured JSON |
 | **V — Hallucination Filter** | ASIN + title double-check against the input candidate list |
 | **VI — Evaluation** | Leave-one-out IR metrics: P@K, R@K, NDCG@K, MRR, Hit Rate |
 
@@ -150,7 +150,7 @@ The LLM re-ranking adds measurable value beyond pure vector similarity. A notabl
 | Language | Python 3.10+ |
 | Embeddings | `sentence-transformers` — `all-MiniLM-L6-v2` |
 | Vector store | `faiss-cpu` — `IndexFlatIP` |
-| LLM | Google Gemini 1.5 Flash |
+| LLM | Google Gemini 3 Flash |
 | Text cleaning | `beautifulsoup4`, `re` |
 | Data handling | `pandas`, `numpy` |
 | Environment | Google Colab (GPU T4) |
